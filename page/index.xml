@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Link Blog</title>
+    <link>https://lynxux.github.io/page/</link>
+    <description>Recent content in Pages on Link Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 May 2022 16:07:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://lynxux.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://lynxux.github.io/page/about/</link>
+      <pubDate>Sun, 15 May 2022 16:07:19 +0800</pubDate>
+      
+      <guid>https://lynxux.github.io/page/about/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,9 +6,28 @@
     <description>Recent content on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 15 May 2022 16:07:46 +0800</lastBuildDate>
     
 	<atom:link href="https://lynxux.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://lynxux.github.io/about/</link>
+      <pubDate>Sun, 15 May 2022 16:07:46 +0800</pubDate>
+      
+      <guid>https://lynxux.github.io/about/</guid>
+      <description>关于我 关于Blog </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://lynxux.github.io/page/about/</link>
+      <pubDate>Sun, 15 May 2022 16:07:19 +0800</pubDate>
+      
+      <guid>https://lynxux.github.io/page/about/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
