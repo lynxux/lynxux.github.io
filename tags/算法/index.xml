@@ -6,6 +6,7 @@
     <description>Recent content in 算法 on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 14 Dec 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lynxux.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>LeetCode刷题记录</title>
       <link>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</guid>
       <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。

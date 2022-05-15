@@ -6,24 +6,30 @@
     <description>Recent content on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 May 2022 16:30:32 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 May 2022 16:07:46 +0800</lastBuildDate>
     
 	<atom:link href="https://lynxux.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hello</title>
-      <link>https://lynxux.github.io/page/hello/</link>
-      <pubDate>Sun, 15 May 2022 16:30:32 +0800</pubDate>
+      <title>About</title>
+      <link>https://lynxux.github.io/about/</link>
+      <pubDate>Sun, 15 May 2022 16:07:46 +0800</pubDate>
       
-      <guid>https://lynxux.github.io/page/hello/</guid>
-      <description></description>
+      <guid>https://lynxux.github.io/about/</guid>
+      <description>关于作者 电子信息（计算机）研究生在读
+没有太多热爱的事情，也没有太多讨厌的事情。平时除了写代码之外最大的娱乐就是看剧，包括但不限于综艺，电视剧，电影。也一直很想出去旅游，由于受限于某些原因，一直没能实现。
+所以总的来说，平时的我就是一个非典型的「宅男」。
+欢迎通过左侧的联系方式联系我。
+ 关于博客 搭个人博客说来也有很久了，一开始在 CSDN 和博客园上写点东西，后来好像是大二的时候去腾讯云买了服务器和域名。再后来因为种种原因，域名注销了，服务器的学生优惠也快结束了，就作罢。又换到了 GitHub Pages，期间也经历了几次的推倒重建，之后因为考研，就荒废了。
+现在文章都没有了，一是因为对自己写的东西很不满意，二是也没有写多少东西，也就没有做备份。
+这段时间闲了下来，就把博客又重新弄了一下，希望能坚持吧。</description>
     </item>
     
     <item>
       <title>2022年任务清单</title>
       <link>https://lynxux.github.io/page/2022-04-03-flags-in-2022/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lynxux.github.io/page/2022-04-03-flags-in-2022/</guid>
       <description>想到了就去做吧！
@@ -31,35 +37,9 @@
     </item>
     
     <item>
-      <title>LeetCode刷题记录</title>
-      <link>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</guid>
-      <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。
-这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还是很不错的！
-由于博客不适合展示这么多的内容，所以请移步github-studynotes</description>
-    </item>
-    
-    <item>
-      <title>v2ray 下 windows terminal 代理的配置</title>
-      <link>https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/</guid>
-      <description>初衷 Windows 下的浏览器的代理是很容易解决的，各种软件或者插件都能直接解决，可是 terminal 中的代理之前尝试过很多次一直没有成功。这也导致了一直没有成功安装 Gatsby 。而且没有代理，git clone 也经常失败。这个问题直到前两天才解决。
-解决  网上其实相应的解决方法都有很多，但是一直就是失败。下面是一般的方法：  set http_proxy=http://127.0.0.1:1080set http_proxys=http://127.0.0.1:1080 这里的配置是一次性的，即当前会话关闭后，该配置就会失效。 http 和 https 都要设置。  然后使用 curl -v http://www.google.com 进行验证即可。  我们都知道1080是指端口，所以我们要把它替换为我们主机上对应的监听端口号。我使用的是 v2ray， 在设置里我们能看到本地的监听端口号为10808， 那就把1080替换为10808。
-看似很简单的过程，那为什么一直失败呢？
-经过不断的搜索，终于在 github issues-无法正确使用v2ray 中看到：
- V2rayN的情况下，右键开启http代理时，http代理的端口是socks+1。比如V2ray的配置文件socks代理是1080，那么默认http代理就是1081。有些软件只能用http代理不能用socks代理，这时就要用到1081这个。否则指向1080端口的话，v2ray就会不停的报错 v2ray.com/core/proxy/socks: unknown Socks version xx
- 原来端口号应该是10809 ！把端口号改为10809后，成功！
-是个很小的问题，但是却困扰了我很久，遂记录一下。</description>
-    </item>
-    
-    <item>
       <title>二十四岁，站在分岔路口</title>
       <link>https://lynxux.github.io/page/2022-03-01-age24/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lynxux.github.io/page/2022-03-01-age24/</guid>
       <description>这篇本应该写在二月六日的文章，却被拖到了三月。为什么会拖了这么久呢？
@@ -85,9 +65,20 @@
     </item>
     
     <item>
+      <title>LeetCode刷题记录</title>
+      <link>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</guid>
+      <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。
+这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还是很不错的！
+由于博客不适合展示这么多的内容，所以请移步github-studynotes</description>
+    </item>
+    
+    <item>
       <title>回顾我的研一生活</title>
       <link>https://lynxux.github.io/page/2021-09-06-first-year-graduate/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://lynxux.github.io/page/2021-09-06-first-year-graduate/</guid>
       <description>距离回学校已经没有几天了，我也即将开始我的研二生活。
@@ -104,12 +95,18 @@
     </item>
     
     <item>
-      <title>随想</title>
-      <link>https://lynxux.github.io/page/2021-06-30-somethinking/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>v2ray 下 windows terminal 代理的配置</title>
+      <link>https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lynxux.github.io/page/2021-06-30-somethinking/</guid>
-      <description> 2021.06.30：今天看到一位up主的视频，讲到学习go语言的心里建设问题，自己非常赞同！  </description>
+      <guid>https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/</guid>
+      <description>初衷 Windows 下的浏览器的代理是很容易解决的，各种软件或者插件都能直接解决，可是 terminal 中的代理之前尝试过很多次一直没有成功。这也导致了一直没有成功安装 Gatsby 。而且没有代理，git clone 也经常失败。这个问题直到前两天才解决。
+解决  网上其实相应的解决方法都有很多，但是一直就是失败。下面是一般的方法：  set http_proxy=http://127.0.0.1:1080set http_proxys=http://127.0.0.1:1080 这里的配置是一次性的，即当前会话关闭后，该配置就会失效。 http 和 https 都要设置。  然后使用 curl -v http://www.google.com 进行验证即可。  我们都知道1080是指端口，所以我们要把它替换为我们主机上对应的监听端口号。我使用的是 v2ray， 在设置里我们能看到本地的监听端口号为10808， 那就把1080替换为10808。
+看似很简单的过程，那为什么一直失败呢？
+经过不断的搜索，终于在 github issues-无法正确使用v2ray 中看到：
+ V2rayN的情况下，右键开启http代理时，http代理的端口是socks+1。比如V2ray的配置文件socks代理是1080，那么默认http代理就是1081。有些软件只能用http代理不能用socks代理，这时就要用到1081这个。否则指向1080端口的话，v2ray就会不停的报错 v2ray.com/core/proxy/socks: unknown Socks version xx
+ 原来端口号应该是10809 ！把端口号改为10809后，成功！
+是个很小的问题，但是却困扰了我很久，遂记录一下。</description>
     </item>
     
   </channel>

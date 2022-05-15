@@ -6,6 +6,7 @@
     <description>Recent content in 工作 on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>2022年任务清单</title>
       <link>https://lynxux.github.io/page/2022-04-03-flags-in-2022/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lynxux.github.io/page/2022-04-03-flags-in-2022/</guid>
       <description>想到了就去做吧！
@@ -21,20 +22,9 @@
     </item>
     
     <item>
-      <title>LeetCode刷题记录</title>
-      <link>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</guid>
-      <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。
-这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还是很不错的！
-由于博客不适合展示这么多的内容，所以请移步github-studynotes</description>
-    </item>
-    
-    <item>
       <title>二十四岁，站在分岔路口</title>
       <link>https://lynxux.github.io/page/2022-03-01-age24/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lynxux.github.io/page/2022-03-01-age24/</guid>
       <description>这篇本应该写在二月六日的文章，却被拖到了三月。为什么会拖了这么久呢？
@@ -57,6 +47,17 @@
 其他 最近的面试使得自己有忙碌了起来，也使自己开始思考关于工作的很多事情。比如，我要找一份什么样的工作（我想要去哪一个公司的哪一个部门）等等。看起来，我总是想在当前的选择中找到一个最好的，但是最好的那个自己似乎也能力不足。我是不是有点太贪心了呢？正确的做法是不是先做，而不是考虑那么多？不知道，在思考下去好像变成了哲学问题。
 在这个自己的本命年，我要找实习找工作并且毕业，看起来是很重要的一年，因为我要做出很多的选择，这些选择可能对以后影响深远。不过就是自己好像还没有能力去选择。
 新的一年，希望自己不要总是对自己作出限制，不要想得太多，努力把！</description>
+    </item>
+    
+    <item>
+      <title>LeetCode刷题记录</title>
+      <link>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</link>
+      <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</guid>
+      <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。
+这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还是很不错的！
+由于博客不适合展示这么多的内容，所以请移步github-studynotes</description>
     </item>
     
   </channel>
