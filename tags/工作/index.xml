@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Link Blog</title>
-    <link>https://lynxux.github.io/</link>
-    <description>Recent content on Link Blog</description>
+    <title>工作 on Link Blog</title>
+    <link>https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/</link>
+    <description>Recent content in 工作 on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 May 2022 16:30:32 +0800</lastBuildDate>
     
-	<atom:link href="https://lynxux.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hello</title>
-      <link>https://lynxux.github.io/page/hello/</link>
-      <pubDate>Sun, 15 May 2022 16:30:32 +0800</pubDate>
-      
-      <guid>https://lynxux.github.io/page/hello/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>2022年任务清单</title>
@@ -39,21 +29,6 @@
       <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。
 这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还是很不错的！
 由于博客不适合展示这么多的内容，所以请移步github-studynotes</description>
-    </item>
-    
-    <item>
-      <title>v2ray 下 windows terminal 代理的配置</title>
-      <link>https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/</guid>
-      <description>初衷 Windows 下的浏览器的代理是很容易解决的，各种软件或者插件都能直接解决，可是 terminal 中的代理之前尝试过很多次一直没有成功。这也导致了一直没有成功安装 Gatsby 。而且没有代理，git clone 也经常失败。这个问题直到前两天才解决。
-解决  网上其实相应的解决方法都有很多，但是一直就是失败。下面是一般的方法：  set http_proxy=http://127.0.0.1:1080set http_proxys=http://127.0.0.1:1080 这里的配置是一次性的，即当前会话关闭后，该配置就会失效。 http 和 https 都要设置。  然后使用 curl -v http://www.google.com 进行验证即可。  我们都知道1080是指端口，所以我们要把它替换为我们主机上对应的监听端口号。我使用的是 v2ray， 在设置里我们能看到本地的监听端口号为10808， 那就把1080替换为10808。
-看似很简单的过程，那为什么一直失败呢？
-经过不断的搜索，终于在 github issues-无法正确使用v2ray 中看到：
- V2rayN的情况下，右键开启http代理时，http代理的端口是socks+1。比如V2ray的配置文件socks代理是1080，那么默认http代理就是1081。有些软件只能用http代理不能用socks代理，这时就要用到1081这个。否则指向1080端口的话，v2ray就会不停的报错 v2ray.com/core/proxy/socks: unknown Socks version xx
- 原来端口号应该是10809 ！把端口号改为10809后，成功！
-是个很小的问题，但是却困扰了我很久，遂记录一下。</description>
     </item>
     
     <item>
@@ -82,34 +57,6 @@
 其他 最近的面试使得自己有忙碌了起来，也使自己开始思考关于工作的很多事情。比如，我要找一份什么样的工作（我想要去哪一个公司的哪一个部门）等等。看起来，我总是想在当前的选择中找到一个最好的，但是最好的那个自己似乎也能力不足。我是不是有点太贪心了呢？正确的做法是不是先做，而不是考虑那么多？不知道，在思考下去好像变成了哲学问题。
 在这个自己的本命年，我要找实习找工作并且毕业，看起来是很重要的一年，因为我要做出很多的选择，这些选择可能对以后影响深远。不过就是自己好像还没有能力去选择。
 新的一年，希望自己不要总是对自己作出限制，不要想得太多，努力把！</description>
-    </item>
-    
-    <item>
-      <title>回顾我的研一生活</title>
-      <link>https://lynxux.github.io/page/2021-09-06-first-year-graduate/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lynxux.github.io/page/2021-09-06-first-year-graduate/</guid>
-      <description>距离回学校已经没有几天了，我也即将开始我的研二生活。
-很巧的是，当我写下这些文字的时候，我发现一年前的今天，我刚好正式开始了我的研究生生活。
-回看我的研一生活，有很多悲伤，痛苦，焦虑的时刻，也有一些开心的时刻。但是我第一个会想到的，应该还是那些并不太愉快的事情吧。
- 主要的原因应该还是自己发现研究生的生活和自己想象的有很大区别，而自己也是初次面临类似工作的生活状态，有很多不适应的地方。
-这一年，平日里除了上课，写作业，就总是在给导师写专利，写软著，写报告，做一点基础的编码工作。感觉也不是很闲，但是却好像没有学到太多东西；与导师相处也并不是很愉快，有点为自己的毕业担心；眼看着要到研二了，找工作的事情又增加了我的焦虑。
-自己的性格本就是比较操心的类型，我总是会想的比较多，喜欢提早做准备。然而导师有很多事情自己没有办法掌控，但是又需要我去做。同时自己也比较自闭，导师带我去开会时，我一方面觉得做的东西不好，不好意思去开会；另一方面陌生人多的场合我都不喜欢去。这都会使我变得异常焦虑。
-我常常也会自我安慰，比如告诉自己社会就是这样；外出开会可以使自己变得更加的外向，使自己更加适应这样的场合等等。但是想起来的话，还是会变得很不开心。
-我可能就是很矛盾吧，总是在不断地提出问题再自我否定。
- 吐槽了这么多， 那就再说一些开心的事情。
-比如：
- 和沙雕网友们面了基，也认识了很多新朋友！ 去了趟昆山、杭州，也和老友们见了面！ 换了很多新的电子设备！ 开始为找工作做准备了！   新的学期，还是希望论文能顺利，能找到实习，如果还能出去旅游一趟就完美了！</description>
-    </item>
-    
-    <item>
-      <title>随想</title>
-      <link>https://lynxux.github.io/page/2021-06-30-somethinking/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lynxux.github.io/page/2021-06-30-somethinking/</guid>
-      <description> 2021.06.30：今天看到一位up主的视频，讲到学习go语言的心里建设问题，自己非常赞同！  </description>
     </item>
     
   </channel>

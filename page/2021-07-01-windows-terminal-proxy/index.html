@@ -9,21 +9,21 @@
   <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Link Blog</title>
-  <link rel = 'canonical' href = 'https://lynxux.github.io/tags/'>
+  <title> v2ray 下 windows terminal 代理的配置 | Link Blog</title>
+  <link rel = 'canonical' href = 'https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/'>
   <meta name="description" content="人生是一场马拉松">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
   <meta name="googlebot" content="index,follow,snippet,archive">
-  <meta property="og:title" content="Tags" />
-<meta property="og:description" content="人生是一场马拉松" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lynxux.github.io/tags/" />
+  <meta property="og:title" content="v2ray 下 windows terminal 代理的配置" />
+<meta property="og:description" content="terminal 中的代理之前尝试过很多次一直没有成功，这个问题直到前两天才解决" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="人生是一场马拉松"/>
+<meta name="twitter:title" content="v2ray 下 windows terminal 代理的配置"/>
+<meta name="twitter:description" content="terminal 中的代理之前尝试过很多次一直没有成功，这个问题直到前两天才解决"/>
 
   
   
@@ -43,8 +43,6 @@
 <link rel="icon" type="image/png" href="https://lynxux.github.io/images/favicon.ico" />
 
   
-  
-    <link href="https://lynxux.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="Link Blog" />
   
   
   
@@ -84,32 +82,34 @@
 
     
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
   <div class="content" itemprop="articleBody">
-    
-    <div id="tag-cloud">
-      
-      <div class="tag-cloud-tags">
-        
-        
-        <a style="font-size: 2.942857142857143rem;" href="https://lynxux.github.io/tags/proxy/">proxy</a>
-        
-        <a style="font-size: 2.942857142857143rem;" href="https://lynxux.github.io/tags/v2ray/">v2ray</a>
-        
-        <a style="font-size: 2.942857142857143rem;" href="https://lynxux.github.io/tags/windows/">windows</a>
-        
-        <a style="font-size: 7.228571428571428rem;" href="https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/">工作</a>
-        
-        <a style="font-size: 9.371428571428572rem;" href="https://lynxux.github.io/tags/%E7%94%9F%E6%B4%BB/">生活</a>
-        
-        <a style="font-size: 9.371428571428572rem;" href="https://lynxux.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">研究生</a>
-        
-        <a style="font-size: 2.942857142857143rem;" href="https://lynxux.github.io/tags/%E7%AE%97%E6%B3%95/">算法</a>
-        
-        <a style="font-size: 5.085714285714285rem;" href="https://lynxux.github.io/tags/%E9%9A%8F%E6%83%B3/">随想</a>
-        
-      </div>
-    </div>
-    
+  
+    <h2 id="初衷">初衷</h2>
+<p>Windows 下的浏览器的代理是很容易解决的，各种软件或者插件都能直接解决，可是 terminal 中的代理之前尝试过很多次一直没有成功。这也导致了一直没有成功安装 Gatsby 。而且没有代理，git clone 也经常失败。这个问题直到前两天才解决。</p>
+<h2 id="解决">解决</h2>
+<ol>
+<li>网上其实相应的解决方法都有很多，但是一直就是失败。下面是一般的方法：</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">set http_proxy<span style="color:#f92672">=</span>http://127.0.0.1:1080
+set http_proxys<span style="color:#f92672">=</span>http://127.0.0.1:1080
+</code></pre></div><ul>
+<li>这里的配置是一次性的，即当前会话关闭后，该配置就会失效。</li>
+<li>http 和 https 都要设置。</li>
+</ul>
+<ol start="2">
+<li>然后使用 <code>curl -v http://www.google.com</code> 进行验证即可。</li>
+</ol>
+<p>我们都知道1080是指端口，所以我们要把它替换为我们主机上对应的监听端口号。我使用的是 v2ray， 在设置里我们能看到本地的监听端口号为10808， 那就把1080替换为10808。</p>
+<p>看似很简单的过程，那为什么一直失败呢？</p>
+<p>经过不断的搜索，终于在 <a href="https://github.com/v2ray/v2ray-core/issues/382">github issues-无法正确使用v2ray</a> 中看到：</p>
+<blockquote>
+<p><strong><code>V2rayN</code>的情况下，右键开启<code>http</code>代理时，<code>http</code>代理的端口是<code>socks+1</code></strong>。比如<code>V2ray</code>的配置文件<code>socks</code>代理是1080，那么默认<code>http</code>代理就是1081。有些软件只能用<code>http</code>代理不能用<code>socks</code>代理，这时就要用到1081这个。否则指向1080端口的话，v2ray就会不停的报错 <code>v2ray.com/core/proxy/socks: unknown Socks version xx</code></p>
+</blockquote>
+<p>原来端口号应该是10809 ！把端口号改为10809后，成功！</p>
+<p>是个很小的问题，但是却困扰了我很久，遂记录一下。</p>
+
+  
   </div>
 </article>
 

@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Link Blog</title>
-    <link>https://lynxux.github.io/</link>
-    <description>Recent content on Link Blog</description>
+    <title>生活 on Link Blog</title>
+    <link>https://lynxux.github.io/tags/%E7%94%9F%E6%B4%BB/</link>
+    <description>Recent content in 生活 on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 May 2022 16:30:32 +0800</lastBuildDate>
     
-	<atom:link href="https://lynxux.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lynxux.github.io/tags/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Hello</title>
-      <link>https://lynxux.github.io/page/hello/</link>
-      <pubDate>Sun, 15 May 2022 16:30:32 +0800</pubDate>
-      
-      <guid>https://lynxux.github.io/page/hello/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>2022年任务清单</title>
@@ -28,32 +18,6 @@
       <guid>https://lynxux.github.io/page/2022-04-03-flags-in-2022/</guid>
       <description>想到了就去做吧！
  关于工作 1. Leetcode刷到700题  截止04.03，已刷320题 截止04.13，已刷331题（本月由于部分题2刷，可能进度稍慢）  2. MIT 6.824 (分布式系统)  预计5月前完成（lab1， lab2） 截止04.04，完成lab1 截止04.13，完成lab2A 截止04.15，完成lab2B 截止04.17，完成lab2C 截止04.20，完成lab2D 截止04.24，完成所有（lecture + lab1，2）  3. MIT 6.s081 或者 Tsinghua rcore (操作系统)  7月前完成  4. Stanford CS144 或者 gev/evio 开源项目 (计算机网络)  9月前完成  5. rosedb 或者 CMU 15-445 或者 MIT 6.830 (数据库)  12月前完成   关于学习 1. 中期报告 2. 毕业论文  关于生活 1. 运动  学校解封之后，还是要继续健身啊！希望能看到腹肌！  2.</description>
-    </item>
-    
-    <item>
-      <title>LeetCode刷题记录</title>
-      <link>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</guid>
-      <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。
-这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还是很不错的！
-由于博客不适合展示这么多的内容，所以请移步github-studynotes</description>
-    </item>
-    
-    <item>
-      <title>v2ray 下 windows terminal 代理的配置</title>
-      <link>https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lynxux.github.io/page/2021-07-01-windows-terminal-proxy/</guid>
-      <description>初衷 Windows 下的浏览器的代理是很容易解决的，各种软件或者插件都能直接解决，可是 terminal 中的代理之前尝试过很多次一直没有成功。这也导致了一直没有成功安装 Gatsby 。而且没有代理，git clone 也经常失败。这个问题直到前两天才解决。
-解决  网上其实相应的解决方法都有很多，但是一直就是失败。下面是一般的方法：  set http_proxy=http://127.0.0.1:1080set http_proxys=http://127.0.0.1:1080 这里的配置是一次性的，即当前会话关闭后，该配置就会失效。 http 和 https 都要设置。  然后使用 curl -v http://www.google.com 进行验证即可。  我们都知道1080是指端口，所以我们要把它替换为我们主机上对应的监听端口号。我使用的是 v2ray， 在设置里我们能看到本地的监听端口号为10808， 那就把1080替换为10808。
-看似很简单的过程，那为什么一直失败呢？
-经过不断的搜索，终于在 github issues-无法正确使用v2ray 中看到：
- V2rayN的情况下，右键开启http代理时，http代理的端口是socks+1。比如V2ray的配置文件socks代理是1080，那么默认http代理就是1081。有些软件只能用http代理不能用socks代理，这时就要用到1081这个。否则指向1080端口的话，v2ray就会不停的报错 v2ray.com/core/proxy/socks: unknown Socks version xx
- 原来端口号应该是10809 ！把端口号改为10809后，成功！
-是个很小的问题，但是却困扰了我很久，遂记录一下。</description>
     </item>
     
     <item>
