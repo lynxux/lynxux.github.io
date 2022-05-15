@@ -13,10 +13,10 @@
     
     <item>
       <title>LeetCode刷题记录</title>
-      <link>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</link>
+      <link>https://lynxux.github.io/posts/2021-12-14-leetcode-go-record/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lynxux.github.io/page/2021-12-14-leetcode-go-record/</guid>
+      <guid>https://lynxux.github.io/posts/2021-12-14-leetcode-go-record/</guid>
       <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。
 这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还是很不错的！
 由于博客不适合展示这么多的内容，所以请移步github-studynotes</description>
