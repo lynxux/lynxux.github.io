@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>go 的包管理踩坑记录 | Link Blog</title>
+<meta name="keywords" content="工作, golang">
+<meta name="description" content="对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。
+但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。
+如果一点都不了解go的包管理的可以去Go包管理详解-知乎先看一下。
+首先，GO mod模式会从import的地址上去查找对应的项目，然后把项目拉取到本地的gopath的pkg中。
+问题 1 ：如果我们要暂时修改import包中的代码，要怎么办？
+那我们可能直接修改gopath/pkg里的源码文件吗？
+​	&ndash; 答案是不可以，因为是只读的
+我想GO官方是希望我们使用自己的fork的仓库进行修改，然后拉取再进行测试，但是这样的操作实在过于繁琐，所以此时我们可以使用go vendor
+当我们使用go mod vender命令之后，会在项目的当前目录生成vendor文件，存放着我们所有需要的依赖文件。我们可以修改vendor文件里的源文件，然后进行测试。（当然这种方式并不推荐）
+问题 2 ：如果老的项目不使用mod进行管理，那么我们要怎么办？
+此时，一般项目中都会有vendor目录，如果没有也不要紧，此时都会从gopath的src目录下进行依赖的查找，所以推荐的方式时完全按照go path的方式去组织项目
+就是把所有的项目全部按照import中文件夹的组织方式进行存放，此时一般都会从gopath的src种查找源文件，而且此时如果需要修改引用的包中的源代码也是可以直接修改的。
+但是如果项目有vendor目录，会先查找vendor，如果找不到再从go path的src下查找。
+此时不要忘了把 GO111MODULE 设置为 off 或者空（为空要保证项目目录下没有mod文件）
+问题3：为什么goland中无法查找go path下的包？
+大概率是因为goland是默认开启GOMODULE集成的，即使你在terminal中关闭了GOMODULE，goland还是会使用mod模式。我们需要在Go/Go Modules设置中关闭Enable Go modules intergation
+参考：
+【1】Go包管理详解-知乎">
+<meta name="author" content="">
+<link rel="canonical" href="https://lynxux.github.io/archives/2022-07-26-go-lib-record/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://lynxux.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://lynxux.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://lynxux.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://lynxux.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://lynxux.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="go 的包管理踩坑记录" />
+<meta property="og:description" content="对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。
+但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。
+如果一点都不了解go的包管理的可以去Go包管理详解-知乎先看一下。
+首先，GO mod模式会从import的地址上去查找对应的项目，然后把项目拉取到本地的gopath的pkg中。
+问题 1 ：如果我们要暂时修改import包中的代码，要怎么办？
+那我们可能直接修改gopath/pkg里的源码文件吗？
+​	&ndash; 答案是不可以，因为是只读的
+我想GO官方是希望我们使用自己的fork的仓库进行修改，然后拉取再进行测试，但是这样的操作实在过于繁琐，所以此时我们可以使用go vendor
+当我们使用go mod vender命令之后，会在项目的当前目录生成vendor文件，存放着我们所有需要的依赖文件。我们可以修改vendor文件里的源文件，然后进行测试。（当然这种方式并不推荐）
+问题 2 ：如果老的项目不使用mod进行管理，那么我们要怎么办？
+此时，一般项目中都会有vendor目录，如果没有也不要紧，此时都会从gopath的src目录下进行依赖的查找，所以推荐的方式时完全按照go path的方式去组织项目
+就是把所有的项目全部按照import中文件夹的组织方式进行存放，此时一般都会从gopath的src种查找源文件，而且此时如果需要修改引用的包中的源代码也是可以直接修改的。
+但是如果项目有vendor目录，会先查找vendor，如果找不到再从go path的src下查找。
+此时不要忘了把 GO111MODULE 设置为 off 或者空（为空要保证项目目录下没有mod文件）
+问题3：为什么goland中无法查找go path下的包？
+大概率是因为goland是默认开启GOMODULE集成的，即使你在terminal中关闭了GOMODULE，goland还是会使用mod模式。我们需要在Go/Go Modules设置中关闭Enable Go modules intergation
+参考：
+【1】Go包管理详解-知乎" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lynxux.github.io/archives/2022-07-26-go-lib-record/" /><meta property="article:section" content="archives" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="go 的包管理踩坑记录"/>
+<meta name="twitter:description" content="对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。
+但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。
+如果一点都不了解go的包管理的可以去Go包管理详解-知乎先看一下。
+首先，GO mod模式会从import的地址上去查找对应的项目，然后把项目拉取到本地的gopath的pkg中。
+问题 1 ：如果我们要暂时修改import包中的代码，要怎么办？
+那我们可能直接修改gopath/pkg里的源码文件吗？
+​	&ndash; 答案是不可以，因为是只读的
+我想GO官方是希望我们使用自己的fork的仓库进行修改，然后拉取再进行测试，但是这样的操作实在过于繁琐，所以此时我们可以使用go vendor
+当我们使用go mod vender命令之后，会在项目的当前目录生成vendor文件，存放着我们所有需要的依赖文件。我们可以修改vendor文件里的源文件，然后进行测试。（当然这种方式并不推荐）
+问题 2 ：如果老的项目不使用mod进行管理，那么我们要怎么办？
+此时，一般项目中都会有vendor目录，如果没有也不要紧，此时都会从gopath的src目录下进行依赖的查找，所以推荐的方式时完全按照go path的方式去组织项目
+就是把所有的项目全部按照import中文件夹的组织方式进行存放，此时一般都会从gopath的src种查找源文件，而且此时如果需要修改引用的包中的源代码也是可以直接修改的。
+但是如果项目有vendor目录，会先查找vendor，如果找不到再从go path的src下查找。
+此时不要忘了把 GO111MODULE 设置为 off 或者空（为空要保证项目目录下没有mod文件）
+问题3：为什么goland中无法查找go path下的包？
+大概率是因为goland是默认开启GOMODULE集成的，即使你在terminal中关闭了GOMODULE，goland还是会使用mod模式。我们需要在Go/Go Modules设置中关闭Enable Go modules intergation
+参考：
+【1】Go包管理详解-知乎"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Archives",
+      "item": "https://lynxux.github.io/archives/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "go 的包管理踩坑记录",
+      "item": "https://lynxux.github.io/archives/2022-07-26-go-lib-record/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "go 的包管理踩坑记录",
+  "name": "go 的包管理踩坑记录",
+  "description": "对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。\n但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。\n如果一点都不了解go的包管理的可以去Go包管理详解-知乎先看一下。\n首先，GO mod模式会从import的地址上去查找对应的项目，然后把项目拉取到本地的gopath的pkg中。\n问题 1 ：如果我们要暂时修改import包中的代码，要怎么办？\n那我们可能直接修改gopath/pkg里的源码文件吗？\n​\t\u0026ndash; 答案是不可以，因为是只读的\n我想GO官方是希望我们使用自己的fork的仓库进行修改，然后拉取再进行测试，但是这样的操作实在过于繁琐，所以此时我们可以使用go vendor\n当我们使用go mod vender命令之后，会在项目的当前目录生成vendor文件，存放着我们所有需要的依赖文件。我们可以修改vendor文件里的源文件，然后进行测试。（当然这种方式并不推荐）\n问题 2 ：如果老的项目不使用mod进行管理，那么我们要怎么办？\n此时，一般项目中都会有vendor目录，如果没有也不要紧，此时都会从gopath的src目录下进行依赖的查找，所以推荐的方式时完全按照go path的方式去组织项目\n就是把所有的项目全部按照import中文件夹的组织方式进行存放，此时一般都会从gopath的src种查找源文件，而且此时如果需要修改引用的包中的源代码也是可以直接修改的。\n但是如果项目有vendor目录，会先查找vendor，如果找不到再从go path的src下查找。\n此时不要忘了把 GO111MODULE 设置为 off 或者空（为空要保证项目目录下没有mod文件）\n问题3：为什么goland中无法查找go path下的包？\n大概率是因为goland是默认开启GOMODULE集成的，即使你在terminal中关闭了GOMODULE，goland还是会使用mod模式。我们需要在Go/Go Modules设置中关闭Enable Go modules intergation\n参考：\n【1】Go包管理详解-知乎",
+  "keywords": [
+    "工作", "golang"
+  ],
+  "articleBody": "对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。\n但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。\n如果一点都不了解go的包管理的可以去Go包管理详解-知乎先看一下。\n首先，GO mod模式会从import的地址上去查找对应的项目，然后把项目拉取到本地的gopath的pkg中。\n问题 1 ：如果我们要暂时修改import包中的代码，要怎么办？\n那我们可能直接修改gopath/pkg里的源码文件吗？\n​\t– 答案是不可以，因为是只读的\n我想GO官方是希望我们使用自己的fork的仓库进行修改，然后拉取再进行测试，但是这样的操作实在过于繁琐，所以此时我们可以使用go vendor\n当我们使用go mod vender命令之后，会在项目的当前目录生成vendor文件，存放着我们所有需要的依赖文件。我们可以修改vendor文件里的源文件，然后进行测试。（当然这种方式并不推荐）\n问题 2 ：如果老的项目不使用mod进行管理，那么我们要怎么办？\n此时，一般项目中都会有vendor目录，如果没有也不要紧，此时都会从gopath的src目录下进行依赖的查找，所以推荐的方式时完全按照go path的方式去组织项目\n就是把所有的项目全部按照import中文件夹的组织方式进行存放，此时一般都会从gopath的src种查找源文件，而且此时如果需要修改引用的包中的源代码也是可以直接修改的。\n但是如果项目有vendor目录，会先查找vendor，如果找不到再从go path的src下查找。\n此时不要忘了把 GO111MODULE 设置为 off 或者空（为空要保证项目目录下没有mod文件）\n问题3：为什么goland中无法查找go path下的包？\n大概率是因为goland是默认开启GOMODULE集成的，即使你在terminal中关闭了GOMODULE，goland还是会使用mod模式。我们需要在Go/Go Modules设置中关闭Enable Go modules intergation\n参考：\n【1】Go包管理详解-知乎\n",
+  "wordCount" : "43",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lynxux.github.io/archives/2022-07-26-go-lib-record/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Link Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lynxux.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://lynxux.github.io/" accesskey="h" title="Link Blog (Alt + H)">Link Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://lynxux.github.io/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lynxux.github.io/archives" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lynxux.github.io/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://lynxux.github.io/about" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      go 的包管理踩坑记录
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content"><p>对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。</p>
+<p>但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。</p>
+<blockquote>
+<p>如果一点都不了解go的包管理的可以去<a href="https://zhuanlan.zhihu.com/p/92992277">Go包管理详解-知乎</a>先看一下。</p>
+</blockquote>
+<p>首先，GO mod模式会从import的地址上去查找对应的项目，然后把项目拉取到本地的gopath的pkg中。</p>
+<p><strong>问题 1</strong> ：<strong>如果我们要暂时修改import包中的代码，要怎么办？</strong></p>
+<p>那我们可能直接修改gopath/pkg里的源码文件吗？</p>
+<p>​			&ndash; 答案是不可以，因为是只读的</p>
+<p>我想GO官方是希望我们使用自己的fork的仓库进行修改，然后拉取再进行测试，但是这样的操作实在过于繁琐，所以此时我们可以使用go vendor</p>
+<p>当我们使用go mod vender命令之后，会在项目的当前目录生成vendor文件，存放着我们所有需要的依赖文件。我们可以修改vendor文件里的源文件，然后进行测试。（当然这种方式并不推荐）</p>
+<p><strong>问题 2 ：如果老的项目不使用mod进行管理，那么我们要怎么办？</strong></p>
+<p>此时，一般项目中都会有vendor目录，如果没有也不要紧，此时都会从gopath的src目录下进行依赖的查找，所以推荐的方式时完全按照go path的方式去组织项目</p>
+<p>就是把所有的项目全部按照import中文件夹的组织方式进行存放，此时一般都会从gopath的src种查找源文件，而且此时如果需要修改引用的包中的源代码也是可以直接修改的。</p>
+<p>但是如果项目有vendor目录，会先查找vendor，如果找不到再从go path的src下查找。</p>
+<blockquote>
+<p>此时不要忘了把 GO111MODULE 设置为 off 或者空（为空要保证项目目录下没有mod文件）</p>
+</blockquote>
+<p><strong>问题3：为什么goland中无法查找go path下的包？</strong></p>
+<p>大概率是因为goland是默认开启GOMODULE集成的，即使你在terminal中关闭了GOMODULE，goland还是会使用mod模式。我们需要在<code>Go/Go Modules</code>设置中关闭<code>Enable Go modules intergation</code></p>
+<p>参考：</p>
+<p>【1】<a href="https://zhuanlan.zhihu.com/p/92992277">Go包管理详解-知乎</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/">工作</a></li>
+      <li><a href="https://lynxux.github.io/tags/golang/">golang</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2022 <a href="https://lynxux.github.io/">Link Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

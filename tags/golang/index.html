@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Tags | Link Blog</title>
+<title>golang | Link Blog</title>
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="">
-<link rel="canonical" href="https://lynxux.github.io/tags/">
+<link rel="canonical" href="https://lynxux.github.io/tags/golang/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://lynxux.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://lynxux.github.io/favicon-16x16.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="https://lynxux.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://lynxux.github.io/tags/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://lynxux.github.io/tags/golang/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,13 +55,13 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Tags" />
+</noscript><meta property="og:title" content="golang" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://lynxux.github.io/tags/" />
+<meta property="og:url" content="https://lynxux.github.io/tags/golang/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
+<meta name="twitter:title" content="golang"/>
 <meta name="twitter:description" content=""/>
 
 </head>
@@ -118,7 +118,7 @@
             </li>
             <li>
                 <a href="https://lynxux.github.io/tags" title="Tags">
-                    <span class="active">Tags</span>
+                    <span>Tags</span>
                 </a>
             </li>
             <li>
@@ -129,40 +129,41 @@
         </ul>
     </nav>
 </header>
-<main class="main">
+<main class="main"> 
 <header class="page-header">
-    <h1>Tags</h1>
+  <h1>
+    golang
+  </h1>
 </header>
 
-<ul class="terms-tags">
-    <li>
-        <a href="https://lynxux.github.io/tags/golang/">golang <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://lynxux.github.io/tags/proxy/">proxy <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://lynxux.github.io/tags/v2ray/">v2ray <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://lynxux.github.io/tags/windows/">windows <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/">工作 <sup><strong><sup>4</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://lynxux.github.io/tags/%E7%94%9F%E6%B4%BB/">生活 <sup><strong><sup>3</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://lynxux.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">研究生 <sup><strong><sup>4</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://lynxux.github.io/tags/%E7%AE%97%E6%B3%95/">算法 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-    <li>
-        <a href="https://lynxux.github.io/tags/%E9%9A%8F%E6%83%B3/">随想 <sup><strong><sup>1</sup></strong></sup> </a>
-    </li>
-</ul>
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>go 的包管理踩坑记录
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。
+但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。
+如果一点都不了解go的包管理的可以去Go包管理详解-知乎先看一下。
+首先，GO mod模式会从import的地址上去查找对应的项目，然后把项目拉取到本地的gopath的pkg中。
+问题 1 ：如果我们要暂时修改import包中的代码，要怎么办？
+那我们可能直接修改gopath/pkg里的源码文件吗？
+​	– 答案是不可以，因为是只读的
+我想GO官方是希望我们使用自己的fork的仓库进行修改，然后拉取再进行测试，但是这样的操作实在过于繁琐，所以此时我们可以使用go vendor
+当我们使用go mod vender命令之后，会在项目的当前目录生成vendor文件，存放着我们所有需要的依赖文件。我们可以修改vendor文件里的源文件，然后进行测试。（当然这种方式并不推荐）
+问题 2 ：如果老的项目不使用mod进行管理，那么我们要怎么办？
+此时，一般项目中都会有vendor目录，如果没有也不要紧，此时都会从gopath的src目录下进行依赖的查找，所以推荐的方式时完全按照go path的方式去组织项目
+就是把所有的项目全部按照import中文件夹的组织方式进行存放，此时一般都会从gopath的src种查找源文件，而且此时如果需要修改引用的包中的源代码也是可以直接修改的。
+但是如果项目有vendor目录，会先查找vendor，如果找不到再从go path的src下查找。
+此时不要忘了把 GO111MODULE 设置为 off 或者空（为空要保证项目目录下没有mod文件）
+问题3：为什么goland中无法查找go path下的包？
+大概率是因为goland是默认开启GOMODULE集成的，即使你在terminal中关闭了GOMODULE，goland还是会使用mod模式。我们需要在Go/Go Modules设置中关闭Enable Go modules intergation
+参考：
+【1】Go包管理详解-知乎</p>
+  </div>
+  <footer class="entry-footer"></footer>
+  <a class="entry-link" aria-label="post link to go 的包管理踩坑记录" href="https://lynxux.github.io/archives/2022-07-26-go-lib-record/"></a>
+</article>
     </main>
     
 <footer class="footer">
