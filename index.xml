@@ -6,7 +6,33 @@
     <description>Recent content on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lynxux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lynxux.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go 的包管理踩坑记录</title>
+      <link>https://lynxux.github.io/archives/2022-07-26-go-lib-record/</link>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lynxux.github.io/archives/2022-07-26-go-lib-record/</guid>
+      <description>对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。
+但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。
+如果一点都不了解go的包管理的可以去Go包管理详解-知乎先看一下。
+首先，GO mod模式会从import的地址上去查找对应的项目，然后把项目拉取到本地的gopath的pkg中。
+问题 1 ：如果我们要暂时修改import包中的代码，要怎么办？
+那我们可能直接修改gopath/pkg里的源码文件吗？
+​	&amp;ndash; 答案是不可以，因为是只读的
+我想GO官方是希望我们使用自己的fork的仓库进行修改，然后拉取再进行测试，但是这样的操作实在过于繁琐，所以此时我们可以使用go vendor
+当我们使用go mod vender命令之后，会在项目的当前目录生成vendor文件，存放着我们所有需要的依赖文件。我们可以修改vendor文件里的源文件，然后进行测试。（当然这种方式并不推荐）
+问题 2 ：如果老的项目不使用mod进行管理，那么我们要怎么办？
+此时，一般项目中都会有vendor目录，如果没有也不要紧，此时都会从gopath的src目录下进行依赖的查找，所以推荐的方式时完全按照go path的方式去组织项目
+就是把所有的项目全部按照import中文件夹的组织方式进行存放，此时一般都会从gopath的src种查找源文件，而且此时如果需要修改引用的包中的源代码也是可以直接修改的。
+但是如果项目有vendor目录，会先查找vendor，如果找不到再从go path的src下查找。
+此时不要忘了把 GO111MODULE 设置为 off 或者空（为空要保证项目目录下没有mod文件）
+问题3：为什么goland中无法查找go path下的包？
+大概率是因为goland是默认开启GOMODULE集成的，即使你在terminal中关闭了GOMODULE，goland还是会使用mod模式。我们需要在Go/Go Modules设置中关闭Enable Go modules intergation
+参考：
+【1】Go包管理详解-知乎</description>
+    </item>
+    
     <item>
       <title>About</title>
       <link>https://lynxux.github.io/about/</link>
@@ -108,32 +134,6 @@ V2rayN的情况下，右键开启http代理时，http代理的端口是socks+1�
       
       <guid>https://lynxux.github.io/archive/</guid>
       <description>--- title: &amp;#34;Archive&amp;#34; layout: &amp;#34;archives&amp;#34; url: &amp;#34;/archives/&amp;#34; summary: archives --- </description>
-    </item>
-    
-    <item>
-      <title>go 的包管理踩坑记录</title>
-      <link>https://lynxux.github.io/archives/2022-07-26-go-lib-record/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lynxux.github.io/archives/2022-07-26-go-lib-record/</guid>
-      <description>对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。
-但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。
-如果一点都不了解go的包管理的可以去Go包管理详解-知乎先看一下。
-首先，GO mod模式会从import的地址上去查找对应的项目，然后把项目拉取到本地的gopath的pkg中。
-问题 1 ：如果我们要暂时修改import包中的代码，要怎么办？
-那我们可能直接修改gopath/pkg里的源码文件吗？
-​	&amp;ndash; 答案是不可以，因为是只读的
-我想GO官方是希望我们使用自己的fork的仓库进行修改，然后拉取再进行测试，但是这样的操作实在过于繁琐，所以此时我们可以使用go vendor
-当我们使用go mod vender命令之后，会在项目的当前目录生成vendor文件，存放着我们所有需要的依赖文件。我们可以修改vendor文件里的源文件，然后进行测试。（当然这种方式并不推荐）
-问题 2 ：如果老的项目不使用mod进行管理，那么我们要怎么办？
-此时，一般项目中都会有vendor目录，如果没有也不要紧，此时都会从gopath的src目录下进行依赖的查找，所以推荐的方式时完全按照go path的方式去组织项目
-就是把所有的项目全部按照import中文件夹的组织方式进行存放，此时一般都会从gopath的src种查找源文件，而且此时如果需要修改引用的包中的源代码也是可以直接修改的。
-但是如果项目有vendor目录，会先查找vendor，如果找不到再从go path的src下查找。
-此时不要忘了把 GO111MODULE 设置为 off 或者空（为空要保证项目目录下没有mod文件）
-问题3：为什么goland中无法查找go path下的包？
-大概率是因为goland是默认开启GOMODULE集成的，即使你在terminal中关闭了GOMODULE，goland还是会使用mod模式。我们需要在Go/Go Modules设置中关闭Enable Go modules intergation
-参考：
-【1】Go包管理详解-知乎</description>
     </item>
     
   </channel>

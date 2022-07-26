@@ -5,11 +5,12 @@
     <link>https://lynxux.github.io/tags/golang/</link>
     <description>Recent content in golang on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://lynxux.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lynxux.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>go 的包管理踩坑记录</title>
       <link>https://lynxux.github.io/archives/2022-07-26-go-lib-record/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lynxux.github.io/archives/2022-07-26-go-lib-record/</guid>
       <description>对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。
