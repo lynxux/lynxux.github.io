@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>随想 on Link Blog</title>
     <link>https://lynxux.github.io/tags/%E9%9A%8F%E6%83%B3/</link>
     <description>Recent content in 随想 on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://lynxux.github.io/tags/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lynxux.github.io/tags/%E9%9A%8F%E6%83%B3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>我的研一</title>
       <link>https://lynxux.github.io/posts/2021-09-06-first-year-graduate/</link>
@@ -20,14 +16,14 @@
       <description>距离回学校已经没有几天了，我也即将开始我的研二生活。
 很巧的是，当我写下这些文字的时候，我发现一年前的今天，我刚好正式开始了我的研究生生活。
 回看我的研一生活，有很多悲伤，痛苦，焦虑的时刻，也有一些开心的时刻。但是我第一个会想到的，应该还是那些并不太愉快的事情吧。
- 主要的原因应该还是自己发现研究生的生活和自己想象的有很大区别，而自己也是初次面临类似工作的生活状态，有很多不适应的地方。
+主要的原因应该还是自己发现研究生的生活和自己想象的有很大区别，而自己也是初次面临类似工作的生活状态，有很多不适应的地方。
 这一年，平日里除了上课，写作业，就总是在给导师写专利，写软著，写报告，做一点基础的编码工作。感觉也不是很闲，但是却好像没有学到太多东西；与导师相处也并不是很愉快，有点为自己的毕业担心；眼看着要到研二了，找工作的事情又增加了我的焦虑。
 自己的性格本就是比较操心的类型，我总是会想的比较多，喜欢提早做准备。然而导师有很多事情自己没有办法掌控，但是又需要我去做。同时自己也比较自闭，导师带我去开会时，我一方面觉得做的东西不好，不好意思去开会；另一方面陌生人多的场合我都不喜欢去。这都会使我变得异常焦虑。
 我常常也会自我安慰，比如告诉自己社会就是这样；外出开会可以使自己变得更加的外向，使自己更加适应这样的场合等等。但是想起来的话，还是会变得很不开心。
 我可能就是很矛盾吧，总是在不断地提出问题再自我否定。
- 吐槽了这么多， 那就再说一些开心的事情。
+吐槽了这么多， 那就再说一些开心的事情。
 比如：
- 和沙雕网友们面了基，也认识了很多新朋友！ 去了趟昆山、杭州，也和老友们见了面！ 换了很多新的电子设备！ 开始为找工作做准备了！   新的学期，还是希望论文能顺利，能找到实习，如果还能出去旅游一趟就完美了！</description>
+和沙雕网友们面了基，也认识了很多新朋友！ 去了趟昆山、杭州，也和老友们见了面！ 换了很多新的电子设备！ 开始为找工作做准备了！ 新的学期，还是希望论文能顺利，能找到实习，如果还能出去旅游一趟就完美了！</description>
     </item>
     
   </channel>

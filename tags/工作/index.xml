@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>工作 on Link Blog</title>
     <link>https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/</link>
     <description>Recent content in 工作 on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2022年任务清单</title>
       <link>https://lynxux.github.io/posts/2022-04-03-flags-in-2022/</link>
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://lynxux.github.io/posts/2022-04-03-flags-in-2022/</guid>
-      <description>想到了就去做吧！
- 关于工作 1. Leetcode刷到700题  截止04.03，已刷320题 截止04.13，已刷331题（本月由于部分题2刷，可能进度稍慢）  2. MIT 6.824 (分布式系统)  预计5月前完成（lab1， lab2） 截止04.04，完成lab1 截止04.13，完成lab2A 截止04.15，完成lab2B 截止04.17，完成lab2C 截止04.20，完成lab2D 截止04.24，完成所有（lecture + lab1，2）  3. MIT 6.s081 或者 Tsinghua rcore (操作系统)  7月前完成  4. Stanford CS144 或者 gev/evio 开源项目 (计算机网络)  9月前完成  5. rosedb 或者 CMU 15-445 或者 MIT 6.830 (数据库)  12月前完成   关于学习 1. 中期报告 2. 毕业论文  关于生活 1. 运动  学校解封之后，还是要继续健身啊！希望能看到腹肌！  2.</description>
+      <description> 想到了就去做吧！
+关于工作 1. Leetcode刷到700题 截止04.03，已刷320题 截止04.13，已刷331题（本月由于部分题2刷，可能进度稍慢） 2. MIT 6.824 (分布式系统) 预计5月前完成（lab1， lab2） 截止04.04，完成lab1 截止04.13，完成lab2A 截止04.15，完成lab2B 截止04.17，完成lab2C 截止04.20，完成lab2D 截止04.24，完成所有（lecture + lab1，2） 3. MIT 6.s081 或者 Tsinghua rcore (操作系统) 7月前完成 4. Stanford CS144 或者 gev/evio 开源项目 (计算机网络) 9月前完成 5. rosedb 或者 CMU 15-445 或者 MIT 6.830 (数据库) 12月前完成 关于学习 1. 中期报告 2. 毕业论文 关于生活 1. 运动 学校解封之后，还是要继续健身啊！希望能看到腹肌！ 2. 待补充 </description>
     </item>
     
     <item>
@@ -28,16 +24,16 @@
       
       <guid>https://lynxux.github.io/posts/2022-03-01-age24/</guid>
       <description>这篇本应该写在二月六日的文章，却被拖到了三月
- 事记 这一年，回想到底做了哪些事情，我可能也回想不起多少
+事记 这一年，回想到底做了哪些事情，我可能也回想不起多少
 这一年结束了学生时代的所有考试（应该？），经历第一次的项目结题和第一次做了手术。似乎就没有什么其他很重大的事情了。
 1. 结束了学生时代的所有考试
 我本科大四的生活好像发出过一次这样的感慨，没想到后来又读了研究生。这次发出这样的感概应该不会有下次了把，毕竟自己没有读博的打算。为什么这件事情对我来说还挺重要的呢？可能是因为我实在是厌烦了应试教育。每次考试我都要花很长的时间复习，可是自己对这些知识似乎并没有完全掌握，囫囵吞枣式的复习完成之后能考一个还过的去的分数就可以了。这么多年下来，总感觉自己学了很多东西，但是又忘记了，好像一无所获，一事无成。
 （最近准备面试的生活，又一次有了考试的感觉，可能还是因为自己还是什么都没有学习，又只能靠着临时抱佛脚把。。。
 2. 经历了第一次的项目结题
 算是第一次经历一次很大的事件，虽然这件事自己做的事情不多，但是毕竟是亲身经历，还是会觉得感触颇深。
-  首先就是验证了之前的想法，验收前再怎么焦虑，验收的时候就会发现这其实没什么。可是这样还是改变不了自己的心态，也许多经历几次就会好把。
-  其次，验收的时候真的很忙，也是自己第一次这么忙，从早上6点到晚上12点就一直在忙，中间连喘息的机会都没有。庆幸的是，自己也没觉得这有什么，算是又多了一次体验把。
-  3. 做了一个小手术
+首先就是验证了之前的想法，验收前再怎么焦虑，验收的时候就会发现这其实没什么。可是这样还是改变不了自己的心态，也许多经历几次就会好把。
+其次，验收的时候真的很忙，也是自己第一次这么忙，从早上6点到晚上12点就一直在忙，中间连喘息的机会都没有。庆幸的是，自己也没觉得这有什么，算是又多了一次体验把。
+3. 做了一个小手术
 害，这个其实没什么好说的，只是因为是第一次做手术，感觉还是挺值得纪念的。也算是解决一件事情。
 最近
 开学以来，因为找工作，其实很忙。开学的两周里，除了做了一点老师的事情，其他的每天都在准备面经，到今天面经才基本上完成。然后今天晚上就经历了第一次面试，因为面试的岗位并不是我主动投递的，所以我也预料到了结果，但是表现的很差还是影响心情&amp;hellip;继续加油把！
