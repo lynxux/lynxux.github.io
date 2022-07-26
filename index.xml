@@ -103,11 +103,11 @@ V2rayN的情况下，右键开启http代理时，http代理的端口是socks+1�
     
     <item>
       <title></title>
-      <link>https://lynxux.github.io/archive/</link>
+      <link>https://lynxux.github.io/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lynxux.github.io/archive/</guid>
-      <description>--- title: &amp;#34;Archive&amp;#34; layout: &amp;#34;archives&amp;#34; url: &amp;#34;/archives/&amp;#34; summary: archives --- </description>
+      <guid>https://lynxux.github.io/search/</guid>
+      <description>--- title: &amp;#34;Search&amp;#34; # in any language you want layout: &amp;#34;search&amp;#34; # is necessary # url: &amp;#34;/archive&amp;#34; # description: &amp;#34;Description for Search&amp;#34; summary: &amp;#34;search&amp;#34; placeholder: &amp;#34;placeholder text in search input box&amp;#34; --- </description>
     </item>
     
   </channel>
