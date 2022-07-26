@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lynxux.github.io/tags/v2ray/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>v2ray 下 windows terminal 代理的配置</title>
-      <link>https://lynxux.github.io/posts/2021-07-01-windows-terminal-proxy/</link>
+      <link>https://lynxux.github.io/archives/2021-07-01-windows-terminal-proxy/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lynxux.github.io/posts/2021-07-01-windows-terminal-proxy/</guid>
+      <guid>https://lynxux.github.io/archives/2021-07-01-windows-terminal-proxy/</guid>
       <description>初衷 Windows 下的浏览器的代理是很容易解决的，各种软件或者插件都能直接解决，可是 terminal 中的代理之前尝试过很多次一直没有成功。这也导致了一直没有成功安装 Gatsby 。而且没有代理，git clone 也经常失败。这个问题直到前两天才解决。
 解决 网上其实相应的解决方法都有很多，但是一直就是失败。下面是一般的方法： set http_proxy=http://127.0.0.1:1080 set http_proxys=http://127.0.0.1:1080 这里的配置是一次性的，即当前会话关闭后，该配置就会失效。 http 和 https 都要设置。 然后使用 curl -v http://www.google.com 进行验证即可。 我们都知道1080是指端口，所以我们要把它替换为我们主机上对应的监听端口号。我使用的是 v2ray， 在设置里我们能看到本地的监听端口号为10808， 那就把1080替换为10808。
 看似很简单的过程，那为什么一直失败呢？

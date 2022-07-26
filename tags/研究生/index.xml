@@ -9,20 +9,20 @@
     <lastBuildDate>Sun, 03 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lynxux.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2022年任务清单</title>
-      <link>https://lynxux.github.io/posts/2022-04-03-flags-in-2022/</link>
+      <link>https://lynxux.github.io/archives/2022-04-03-flags-in-2022/</link>
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://lynxux.github.io/posts/2022-04-03-flags-in-2022/</guid>
+      <guid>https://lynxux.github.io/archives/2022-04-03-flags-in-2022/</guid>
       <description> 想到了就去做吧！
 关于工作 1. Leetcode刷到700题 截止04.03，已刷320题 截止04.13，已刷331题（本月由于部分题2刷，可能进度稍慢） 2. MIT 6.824 (分布式系统) 预计5月前完成（lab1， lab2） 截止04.04，完成lab1 截止04.13，完成lab2A 截止04.15，完成lab2B 截止04.17，完成lab2C 截止04.20，完成lab2D 截止04.24，完成所有（lecture + lab1，2） 3. MIT 6.s081 或者 Tsinghua rcore (操作系统) 7月前完成 4. Stanford CS144 或者 gev/evio 开源项目 (计算机网络) 9月前完成 5. rosedb 或者 CMU 15-445 或者 MIT 6.830 (数据库) 12月前完成 关于学习 1. 中期报告 2. 毕业论文 关于生活 1. 运动 学校解封之后，还是要继续健身啊！希望能看到腹肌！ 2. 待补充 </description>
     </item>
     
     <item>
       <title>二十四岁</title>
-      <link>https://lynxux.github.io/posts/2022-03-01-age24/</link>
+      <link>https://lynxux.github.io/archives/2022-03-01-age24/</link>
       <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://lynxux.github.io/posts/2022-03-01-age24/</guid>
+      <guid>https://lynxux.github.io/archives/2022-03-01-age24/</guid>
       <description>这篇本应该写在二月六日的文章，却被拖到了三月
 事记 这一年，回想到底做了哪些事情，我可能也回想不起多少
 这一年结束了学生时代的所有考试（应该？），经历第一次的项目结题和第一次做了手术。似乎就没有什么其他很重大的事情了。
@@ -44,10 +44,10 @@
     
     <item>
       <title>LeetCode刷题记录</title>
-      <link>https://lynxux.github.io/posts/2021-12-14-leetcode-go-record/</link>
+      <link>https://lynxux.github.io/archives/2021-12-14-leetcode-go-record/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lynxux.github.io/posts/2021-12-14-leetcode-go-record/</guid>
+      <guid>https://lynxux.github.io/archives/2021-12-14-leetcode-go-record/</guid>
       <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。
 这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还是很不错的！
 由于博客不适合展示这么多的内容，所以请移步github-studynotes</description>
@@ -55,10 +55,10 @@
     
     <item>
       <title>我的研一</title>
-      <link>https://lynxux.github.io/posts/2021-09-06-first-year-graduate/</link>
+      <link>https://lynxux.github.io/archives/2021-09-06-first-year-graduate/</link>
       <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lynxux.github.io/posts/2021-09-06-first-year-graduate/</guid>
+      <guid>https://lynxux.github.io/archives/2021-09-06-first-year-graduate/</guid>
       <description>距离回学校已经没有几天了，我也即将开始我的研二生活。
 很巧的是，当我写下这些文字的时候，我发现一年前的今天，我刚好正式开始了我的研究生生活。
 回看我的研一生活，有很多悲伤，痛苦，焦虑的时刻，也有一些开心的时刻。但是我第一个会想到的，应该还是那些并不太愉快的事情吧。
