@@ -1,139 +1,139 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Pure theme for Hugo</title>
-    <link>https://example.com/tags/</link>
-    <description>Recent content in Tags on Pure theme for Hugo</description>
+    <title>Tags on Link Blog</title>
+    <link>https://lynxux.github.io/tags/</link>
+    <description>Recent content in Tags on Link Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>CC BY 4.0 CN</copyright>
     <lastBuildDate>Tue, 26 Jul 2022 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://lynxux.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>go 的包管理踩坑记录</title>
-      <link>https://example.com/archives/2022-07-26-go-lib-record/</link>
+      <link>https://lynxux.github.io/archives/2022-07-26-go-lib-record/</link>
       <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/archives/2022-07-26-go-lib-record/</guid>
+      <guid>https://lynxux.github.io/archives/2022-07-26-go-lib-record/</guid>
       <description>对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认</description>
     </item>
     
     <item>
       <title>go 的包管理踩坑记录</title>
-      <link>https://example.com/2022/07/2022-07-26-go-lib-record/</link>
+      <link>https://lynxux.github.io/2022/07/2022-07-26-go-lib-record/</link>
       <pubDate>Tue, 26 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/2022/07/2022-07-26-go-lib-record/</guid>
+      <guid>https://lynxux.github.io/2022/07/2022-07-26-go-lib-record/</guid>
       <description>对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://example.com/about/</link>
+      <link>https://lynxux.github.io/about/</link>
       <pubDate>Sun, 15 May 2022 16:07:46 +0800</pubDate>
       
-      <guid>https://example.com/about/</guid>
+      <guid>https://lynxux.github.io/about/</guid>
       <description>关于作者 电子信息（计算机）研究生在读 没有太多热爱的事情，也没有太多讨厌的事情。平时除了写代码之外最大的娱乐就是看剧，包括但不限于综艺，电视剧</description>
     </item>
     
     <item>
       <title>2022年任务清单</title>
-      <link>https://example.com/archives/2022-04-03-flags-in-2022/</link>
+      <link>https://lynxux.github.io/archives/2022-04-03-flags-in-2022/</link>
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/archives/2022-04-03-flags-in-2022/</guid>
+      <guid>https://lynxux.github.io/archives/2022-04-03-flags-in-2022/</guid>
       <description>想到了就去做吧！ 关于工作 1. Leetcode刷到700题 截止04.03，已刷320题 截止04.13，已刷331题（本月由于部分题2刷，可能进度</description>
     </item>
     
     <item>
       <title>2022年任务清单</title>
-      <link>https://example.com/2022/04/2022-04-03-flags-in-2022/</link>
+      <link>https://lynxux.github.io/2022/04/2022-04-03-flags-in-2022/</link>
       <pubDate>Sun, 03 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/2022/04/2022-04-03-flags-in-2022/</guid>
+      <guid>https://lynxux.github.io/2022/04/2022-04-03-flags-in-2022/</guid>
       <description>想到了就去做吧！ 关于工作 1. Leetcode刷到700题 截止04.03，已刷320题 截止04.13，已刷331题（本月由于部分题2刷，可能进度</description>
     </item>
     
     <item>
       <title>二十四岁</title>
-      <link>https://example.com/archives/2022-03-01-age24/</link>
+      <link>https://lynxux.github.io/archives/2022-03-01-age24/</link>
       <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/archives/2022-03-01-age24/</guid>
+      <guid>https://lynxux.github.io/archives/2022-03-01-age24/</guid>
       <description>这篇本应该写在二月六日的文章，却被拖到了三月 事记 这一年，回想到底做了哪些事情，我可能也回想不起多少 这一年结束了学生时代的所有考试（应该？），</description>
     </item>
     
     <item>
       <title>二十四岁</title>
-      <link>https://example.com/2022/03/2022-03-01-age24/</link>
+      <link>https://lynxux.github.io/2022/03/2022-03-01-age24/</link>
       <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/2022/03/2022-03-01-age24/</guid>
+      <guid>https://lynxux.github.io/2022/03/2022-03-01-age24/</guid>
       <description>这篇本应该写在二月六日的文章，却被拖到了三月 事记 这一年，回想到底做了哪些事情，我可能也回想不起多少 这一年结束了学生时代的所有考试（应该？），</description>
     </item>
     
     <item>
       <title>LeetCode刷题记录</title>
-      <link>https://example.com/archives/2021-12-14-leetcode-go-record/</link>
+      <link>https://lynxux.github.io/archives/2021-12-14-leetcode-go-record/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/archives/2021-12-14-leetcode-go-record/</guid>
+      <guid>https://lynxux.github.io/archives/2021-12-14-leetcode-go-record/</guid>
       <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。 这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还</description>
     </item>
     
     <item>
       <title>LeetCode刷题记录</title>
-      <link>https://example.com/2021/12/2021-12-14-leetcode-go-record/</link>
+      <link>https://lynxux.github.io/2021/12/2021-12-14-leetcode-go-record/</link>
       <pubDate>Tue, 14 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/2021/12/2021-12-14-leetcode-go-record/</guid>
+      <guid>https://lynxux.github.io/2021/12/2021-12-14-leetcode-go-record/</guid>
       <description>更新 这次刷题按照【代码随想录】的章节顺序来刷的，预计会有接近200道题。 这个网站不仅提供的题目的分类，还提供了题目的不同的语言的解答，感觉还</description>
     </item>
     
     <item>
       <title>我的研一</title>
-      <link>https://example.com/archives/2021-09-06-first-year-graduate/</link>
+      <link>https://lynxux.github.io/archives/2021-09-06-first-year-graduate/</link>
       <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/archives/2021-09-06-first-year-graduate/</guid>
+      <guid>https://lynxux.github.io/archives/2021-09-06-first-year-graduate/</guid>
       <description>距离回学校已经没有几天了，我也即将开始我的研二生活。 很巧的是，当我写下这些文字的时候，我发现一年前的今天，我刚好正式开始了我的研究生生活。 回</description>
     </item>
     
     <item>
       <title>我的研一</title>
-      <link>https://example.com/2021/09/2021-09-06-first-year-graduate/</link>
+      <link>https://lynxux.github.io/2021/09/2021-09-06-first-year-graduate/</link>
       <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/2021/09/2021-09-06-first-year-graduate/</guid>
+      <guid>https://lynxux.github.io/2021/09/2021-09-06-first-year-graduate/</guid>
       <description>距离回学校已经没有几天了，我也即将开始我的研二生活。 很巧的是，当我写下这些文字的时候，我发现一年前的今天，我刚好正式开始了我的研究生生活。 回</description>
     </item>
     
     <item>
       <title>v2ray 下 windows terminal 代理的配置</title>
-      <link>https://example.com/archives/2021-07-01-windows-terminal-proxy/</link>
+      <link>https://lynxux.github.io/archives/2021-07-01-windows-terminal-proxy/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/archives/2021-07-01-windows-terminal-proxy/</guid>
+      <guid>https://lynxux.github.io/archives/2021-07-01-windows-terminal-proxy/</guid>
       <description>初衷 Windows 下的浏览器的代理是很容易解决的，各种软件或者插件都能直接解决，可是 terminal 中的代理之前尝试过很多次一直没有成功。这也导致了一直没有成功安装 Gatsby</description>
     </item>
     
     <item>
       <title>v2ray 下 windows terminal 代理的配置</title>
-      <link>https://example.com/2021/07/2021-07-01-windows-terminal-proxy/</link>
+      <link>https://lynxux.github.io/2021/07/2021-07-01-windows-terminal-proxy/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/2021/07/2021-07-01-windows-terminal-proxy/</guid>
+      <guid>https://lynxux.github.io/2021/07/2021-07-01-windows-terminal-proxy/</guid>
       <description>初衷 Windows 下的浏览器的代理是很容易解决的，各种软件或者插件都能直接解决，可是 terminal 中的代理之前尝试过很多次一直没有成功。这也导致了一直没有成功安装 Gatsby</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://example.com/archive/</link>
+      <link>https://lynxux.github.io/archive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/archive/</guid>
+      <guid>https://lynxux.github.io/archive/</guid>
       <description>--- title: &amp;quot;Archive&amp;quot; layout: &amp;quot;archives&amp;quot; url: &amp;quot;/archives/&amp;quot; summary: archives --- </description>
     </item>
     
