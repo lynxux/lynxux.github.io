@@ -57,17 +57,9 @@
   
   
 
-  <body class="main-right theme-white" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <body class="main-center theme-white" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
     <div class="slimContent">
-      <div class="navbar-header">
-        <div class="profile-block text-center">
-          <a id="avatar" href="https://github.com/lynxux" target="_blank">
-            <img class="img-circle img-rotate" src="https://lynxux.github.io/ava.png" width="200" height="200">
-          </a>
-          <h2 id="name" class="hidden-xs hidden-sm">Link</h2>
-          <h3 id="title" class="hidden-xs hidden-sm hidden-md">Life is a marathon</h3>
-          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>Shanghai, China</small>
-        </div><div class="search" id="search-form-wrap">
+      <div class="navbar-header"><div class="search" id="search-form-wrap">
     <form class="search-form sidebar-form">
         <div class="input-group">
             <input type="text" class="search-form-input form-control" placeholder="Search" />
@@ -145,69 +137,49 @@
 
       <div class="widget">
     <h3 class="widget-title"> Tags</h3>
-    <div id="tag-cloud-list" class="widget-body">
+    <div class="widget-body">
+        <ul class="tag-list">
             
             
-            <a href="https://lynxux.github.io/tags/golang/" class="tag-list-link" rel="1">golang<span
-               class="tag-list-count">1</span></a>
+            <li class="tag-list-item"><a href="https://lynxux.github.io/tags/golang/" class="tag-list-link">golang</a><span
+                    class="tag-list-count">1</span></li>
             
             
-            <a href="https://lynxux.github.io/tags/proxy/" class="tag-list-link" rel="1">proxy<span
-               class="tag-list-count">1</span></a>
+            <li class="tag-list-item"><a href="https://lynxux.github.io/tags/proxy/" class="tag-list-link">proxy</a><span
+                    class="tag-list-count">1</span></li>
             
             
-            <a href="https://lynxux.github.io/tags/v2ray/" class="tag-list-link" rel="1">v2ray<span
-               class="tag-list-count">1</span></a>
+            <li class="tag-list-item"><a href="https://lynxux.github.io/tags/v2ray/" class="tag-list-link">v2ray</a><span
+                    class="tag-list-count">1</span></li>
             
             
-            <a href="https://lynxux.github.io/tags/windows/" class="tag-list-link" rel="1">windows<span
-               class="tag-list-count">1</span></a>
+            <li class="tag-list-item"><a href="https://lynxux.github.io/tags/windows/" class="tag-list-link">windows</a><span
+                    class="tag-list-count">1</span></li>
             
             
-            <a href="https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/" class="tag-list-link" rel="4">工作<span
-               class="tag-list-count">4</span></a>
+            <li class="tag-list-item"><a href="https://lynxux.github.io/tags/%E5%B7%A5%E4%BD%9C/" class="tag-list-link">工作</a><span
+                    class="tag-list-count">4</span></li>
             
             
-            <a href="https://lynxux.github.io/tags/%E7%94%9F%E6%B4%BB/" class="tag-list-link" rel="3">生活<span
-               class="tag-list-count">3</span></a>
+            <li class="tag-list-item"><a href="https://lynxux.github.io/tags/%E7%94%9F%E6%B4%BB/" class="tag-list-link">生活</a><span
+                    class="tag-list-count">3</span></li>
             
             
-            <a href="https://lynxux.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" class="tag-list-link" rel="4">研究生<span
-               class="tag-list-count">4</span></a>
+            <li class="tag-list-item"><a href="https://lynxux.github.io/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" class="tag-list-link">研究生</a><span
+                    class="tag-list-count">4</span></li>
             
             
-            <a href="https://lynxux.github.io/tags/%E7%AE%97%E6%B3%95/" class="tag-list-link" rel="1">算法<span
-               class="tag-list-count">1</span></a>
+            <li class="tag-list-item"><a href="https://lynxux.github.io/tags/%E7%AE%97%E6%B3%95/" class="tag-list-link">算法</a><span
+                    class="tag-list-count">1</span></li>
             
             
-            <a href="https://lynxux.github.io/tags/%E9%9A%8F%E6%83%B3/" class="tag-list-link" rel="1">随想<span
-               class="tag-list-count">1</span></a>
+            <li class="tag-list-item"><a href="https://lynxux.github.io/tags/%E9%9A%8F%E6%83%B3/" class="tag-list-link">随想</a><span
+                    class="tag-list-count">1</span></li>
             
+        </ul>
+
     </div>
-<script>
-document.onreadystatechange = () => {
-  if (document.readyState === 'complete') {
-    tagCloud('#tag-cloud-list a',  12 ,  20 );
-  }
-};
-
-function tagCloud(where, min, max) {
-  let iMax = 0;
-  let iMin = 0;
-  $(where).each(function() {
-    let weight = Number($(this).attr("rel"));
-    if(iMax < weight) iMax = weight;
-    if(iMin > weight || iMin == 0) iMin = weight;
-  });
-  let step = (max - min)/(iMax - iMin);
-  $(where).each(function() {
-    let weight = $(this).attr("rel") - iMin;
-    $(this).css({"font-size": min + (weight * step) + 'px'});
-  });
-};
-</script>
 </div>
-
       
 <div class="widget">
     <h3 class="widget-title">Recent Posts</h3>
@@ -353,21 +325,6 @@ set http_proxys=http://127.0.0.1:1080
   </ul>
 </blockquote>
 
-<div class="panel panel-default panel-badger">
-  <div class="panel-body">
-    <figure class="media">
-      <div class="media-left">
-        <a href="https://github.com/lynxux" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="https://lynxux.github.io/ava.png" class="img-rounded w-full" alt="">
-        </a>
-      </div>
-      <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/lynxux" target="_blank"><span class="text-dark">Link</span><small class="ml-1x">Life is a marathon</small></a></h3>
-        <div>Good Good Study, Day Day Up~</div>
-      </div>
-    </figure>
-  </div>
-</div>
 
     </div>
   </article>
