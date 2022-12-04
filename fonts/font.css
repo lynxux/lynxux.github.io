@@ -1,4 +1,4 @@
-body {
-  font: LXGWWenKai-Regular;
+@font-face {
+  font-family: LXGWWenKai-Regular;
   src: url("../fonts/LXGWWenKai-Regular.ttf");
 }
