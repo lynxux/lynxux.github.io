@@ -1,4 +1,94 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Link's Blog]]></title><description><![CDATA[人生是一场马拉松]]></description><link>https://lynxux.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Sep 2023 07:37:25 GMT</lastBuildDate><item><title><![CDATA[记在二十五岁]]></title><description><![CDATA[又一年]]></description><link>https://lynxux.github.io/posts/2023-01-31-age25/</link><guid isPermaLink="false">https://lynxux.github.io/posts/2023-01-31-age25/</guid><pubDate>Tue, 31 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-2022年flag回顾&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-2022%E5%B9%B4flag%E5%9B%9E%E9%A1%BE&quot; aria-label=&quot;1 2022年flag回顾 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 2022年flag回顾&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Link's Blog]]></title><description><![CDATA[人生是一场马拉松]]></description><link>https://lynxux.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Sep 2023 08:23:13 GMT</lastBuildDate><item><title><![CDATA[Rust学习笔记（更新中）]]></title><description><![CDATA[Rust 学习笔记]]></description><link>https://lynxux.github.io/posts/2023-09-06-rust-note/</link><guid isPermaLink="false">https://lynxux.github.io/posts/2023-09-06-rust-note/</guid><pubDate>Wed, 06 Sep 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Rust 学习笔记&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;markdown&quot;&gt;&lt;pre class=&quot;language-markdown&quot;&gt;&lt;code class=&quot;language-markdown&quot;&gt;&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;##&lt;/span&gt; 变量&lt;/span&gt;
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;###&lt;/span&gt; 声明变量&lt;/span&gt;
+值得注意的是，声明变量默认是不可变的。
+这里的赋值行为被称为绑定。
+&lt;span class=&quot;token code&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;token code-language&quot;&gt;rust&lt;/span&gt;
+&lt;span class=&quot;token code-block language-rust&quot;&gt;let v = 10;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; 想对一个变量进行修改（再次绑定），有两种方式：
+&lt;span class=&quot;token code&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;token code-language&quot;&gt;rust&lt;/span&gt;
+&lt;span class=&quot;token code-block language-rust&quot;&gt;// 声明为可变变量
+let mut v = 10;
+println!(&quot;{}&quot;, v);
+v = 20;
+println!(&quot;{}&quot;, v);
+
+// 变量隐藏，每一次都会创建一个新变量并隐藏之前的绑定关系
+let v2 = 10;
+let v2 = v2 + 10;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;###&lt;/span&gt; 变量的类型&lt;/span&gt;
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;####&lt;/span&gt; 数字类型&lt;/span&gt;
+&lt;span class=&quot;token code&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;token code-language&quot;&gt;rust&lt;/span&gt;
+&lt;span class=&quot;token code-block language-rust&quot;&gt;let number: u32 = 14;
+
+// 在 println 中将数据类型后缀添加到每个文本数字，以告知 Rust 有关数据类型的信息
+println!(&quot;1 + 2 = {}&quot;,1u32 + 2);&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;####&lt;/span&gt; 字符类型 char&lt;/span&gt;
+有些语言中，char 类型是一个 8位无符号整数，但是 rust 是 Unicode编码，实际是一个21位整数，系统填充为32位
+&lt;span class=&quot;token code&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;token code-language&quot;&gt;rust&lt;/span&gt;
+&lt;span class=&quot;token code-block language-rust&quot;&gt;let uppercase_s = &apos;S&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;/span&gt;
+
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;####&lt;/span&gt; 字符串类型 str String&lt;/span&gt;
+&lt;span class=&quot;token blockquote punctuation&quot;&gt;&gt;&lt;/span&gt; 关于 str 与 String 的具体区别，在所有权相关概念之后进行介绍
+str 可以看做字符串切片，引用字符串切片使用 &amp;amp;str
+
+&lt;span class=&quot;token code&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;token code-language&quot;&gt;rust&lt;/span&gt;
+&lt;span class=&quot;token code-block language-rust&quot;&gt;let char_1: char = &apos;S&apos;;
+let string_1 = &quot;string_1&quot;;   // 值得注意的是，这里是&amp;amp;str 类型，并不是String？
+let String_2: &amp;amp;str = &quot;ace&quot;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;/span&gt;
+ 
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;####&lt;/span&gt; 元组&lt;/span&gt;
+这里是指集合到一个复合值中的不同类型值的分组。
+
+&lt;span class=&quot;token code&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;token code-language&quot;&gt;rust&lt;/span&gt;
+&lt;span class=&quot;token code-block language-rust&quot;&gt;let tuple_3 = (&apos;e&apos;, 5i32, true)
+// 访问元组使用索引的形式是 &amp;lt;tuple&gt;.&amp;lt;index&gt;
+println!(&quot;Is &apos;{}&apos; the {}th letter of the alphabet? {}&quot;, tuple_3.0, tuple_3.1, tuple_3.2);&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;####&lt;/span&gt; 结构&lt;/span&gt;
+rust中结构分为三种：经典结构，元组结构，单元结构
+
+&lt;span class=&quot;token code&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;span class=&quot;token code-language&quot;&gt;rust&lt;/span&gt;
+&lt;span class=&quot;token code-block language-rust&quot;&gt;// 定义
+struct Student{
+    name: String,
+    level: u8,
+    remote: bool
+}
+    
+struct Grades(char, char, char, char, f32);
+
+struct Unit;
+
+// 实例化
+let user_1 = Student{
+    name: String::from(&quot;link&quot;),
+    remote: false,
+    level: 1
+};
+let user_2 = Student{
+    name: String::from(&quot;lun&quot;),
+    remote:true,
+    level: 2
+};
+
+let mark_1 = Grades(&apos;A&apos;,&apos;A&apos;,&apos;A&apos;,&apos;A&apos;,9.9);
+let mark_2 = Grades(&apos;A&apos;,&apos;C&apos;,&apos;B&apos;,&apos;A&apos;,9.1);
+
+println!(&quot;{}, level:{}, remote:{}, Grades:{},{},{},{},avg:{}&quot;, user_1.name, user_1.level,user_1.remote, mark_1.0, mark_1.1, mark_1.2, mark_1.3, mark_1.4);
+println!(&quot;{}, level:{}, remote:{}, Grades:{},{},{},{},avg:{}&quot;, user_2.name, user_2.level,user_2.remote, mark_2.0, mark_2.1, mark_2.2, mark_2.3, mark_2.4);&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;```&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[记在二十五岁]]></title><description><![CDATA[又一年]]></description><link>https://lynxux.github.io/posts/2023-01-31-age25/</link><guid isPermaLink="false">https://lynxux.github.io/posts/2023-01-31-age25/</guid><pubDate>Tue, 31 Jan 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-2022年flag回顾&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-2022%E5%B9%B4flag%E5%9B%9E%E9%A1%BE&quot; aria-label=&quot;1 2022年flag回顾 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 2022年flag回顾&lt;/h2&gt;
 &lt;p&gt;这份写于2022年4月的&lt;a href=&quot;https://lynxux.github.io/posts/2022-04-03-flags-in-2022/&quot;&gt;2022年任务清单&lt;/a&gt;，现在会看起来，确实有很多事情没有完成&lt;/p&gt;
 &lt;h3 id=&quot;关于工作&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%85%B3%E4%BA%8E%E5%B7%A5%E4%BD%9C&quot; aria-label=&quot;关于工作 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;关于工作&lt;/h3&gt;
 &lt;p&gt;首先就是刷题，截至今天，最终题数定格在了377。在暑期实习求职结束后，就几乎没有刷题了。这是自己秋招失利的一部分原因。&lt;/p&gt;
@@ -8,7 +98,7 @@
 &lt;h3 id=&quot;关于生活&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%85%B3%E4%BA%8E%E7%94%9F%E6%B4%BB&quot; aria-label=&quot;关于生活 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;关于生活&lt;/h3&gt;
 &lt;p&gt;腹肌其实通过4月到8月的努力有了雏形，但是后面没能坚持。。。&lt;/p&gt;
 &lt;p&gt;新的一年希望再接再厉，不要再打自己的脸！&lt;/p&gt;
-&lt;h2 id=&quot;2&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2&quot; aria-label=&quot;2 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2.&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[go 的包管理踩坑记录]]></title><description><![CDATA[一直学不会~]]></description><link>https://lynxux.github.io/posts/2022-07-26-go-lib/</link><guid isPermaLink="false">https://lynxux.github.io/posts/2022-07-26-go-lib/</guid><pubDate>Tue, 26 Jul 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。&lt;/p&gt;
+&lt;h2 id=&quot;2-todo&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-todo&quot; aria-label=&quot;2 todo permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. todo&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[go 的包管理踩坑记录]]></title><description><![CDATA[一直学不会~]]></description><link>https://lynxux.github.io/posts/2022-07-26-go-lib/</link><guid isPermaLink="false">https://lynxux.github.io/posts/2022-07-26-go-lib/</guid><pubDate>Tue, 26 Jul 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;对于现在学习goland的新手来说（比如我），最熟悉的包管理方式应该就是GO MODULE（mod模式）了，因为GO 1.11版本之后就开始默认使用GOMODULE了。&lt;/p&gt;
 &lt;p&gt;但是看过相关的文章大家都应该知道，在GO 1.5版本之前GO使用gopath进行包的管理，在GO 1.5之后又增加了vendor机制。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如果一点都不了解go的包管理的可以去&lt;a href=&quot;https://zhuanlan.zhihu.com/p/92992277&quot;&gt;Go包管理详解-知乎&lt;/a&gt;先看一下。&lt;/p&gt;

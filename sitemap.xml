@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://lynxux.github.io/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lynxux.github.io/posts/2023-09-06-rust-note/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lynxux.github.io/posts/2023-01-31-age25/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lynxux.github.io/posts/2022-07-26-go-lib/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lynxux.github.io/posts/2022-04-03-flags-in-2022/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -10,6 +11,8 @@
 <url> <loc>https://lynxux.github.io/posts/2021-07-01-windows-terminal-proxy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lynxux.github.io/posts/2021-06-30-someThinking/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lynxux.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lynxux.github.io/page/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://lynxux.github.io/tags/rust/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lynxux.github.io/tags/golang/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lynxux.github.io/tags/proxy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://lynxux.github.io/tags/v-2-ray/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
